@@ -42,7 +42,7 @@ function App() {
     <>
       <Toaster position="top-center" />
 
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSubmit={handleSearch} />
 
       {isLoading && <Loader />}
 
