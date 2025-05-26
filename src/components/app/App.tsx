@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import SearchBar from '../searchBar/SearchBar.tsx'
+import SearchBar from '../SearchBar/SearchBar.tsx'
 import { type Movie } from '../../types/movie.ts';
-import MovieGrid from '../movieGrid/MovieGrid.tsx';
+import MovieGrid from '../MovieGrid/MovieGrid.tsx';
 import { fetchMovies } from '../../services/movieService.ts';
-import ErrorMessage from '../errorMessage/ErrorMessage.tsx';
+import ErrorMessage from '../ErrorMessage/ErrorMessage.tsx';
 import toast, { Toaster } from 'react-hot-toast';
-import Loader from '../loader/Loader.tsx';
-import MovieModal from '../movieModal/MovieModal.tsx';
+import Loader from '../Loader/Loader.tsx';
+import MovieModal from '../MovieModal/MovieModal.tsx';
 
 
 
