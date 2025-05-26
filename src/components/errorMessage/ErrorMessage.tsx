@@ -1,14 +1,15 @@
-import { useEffect } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+// import { useEffect } from 'react';
+// import toast, { Toaster } from 'react-hot-toast';
+import css from './ErrorMessage.module.css';
 
-interface ErrorMessageProps {
-  message: string;
-}
+// interface ErrorMessageProps {
+//   message: string;
+// }
 
-export default function ErrorMessage({ message }: ErrorMessageProps) {
-  useEffect(() => {
-    toast.error(message);
-  }, [message]);
-
-  return <Toaster />;
+export default function ErrorMessage() {
+  return (
+    <p className={css.text}>
+      There was an error, please try again...
+    </p>
+  );
 }

@@ -1,21 +1,18 @@
 
-// import React from 'react';
 import {type Movie } from '../../types/movie';
 import styles from './MovieGrid.module.css';
 
 interface MovieGridProps {
-  movies: Movie[];                
+  movies: Movie[];   
+  onSelect: (movie: Movie) => void;
 }
 
-export default function MovieGrid({ movies }: MovieGridProps) {
-  if (movies.length === 0) {
-    return <p className={styles.noResults}>Нічого не знайдено.</p>;
-  }
+export default function MovieGrid({ movies, onSelect }: MovieGridProps) {
 
   return (
     <div className={styles.grid}>
       {movies.map(movie => (
-        <div key={movie.id} className={styles.card}>
+        <div key={movie.id} className={styles.card} onClick={() => onSelect(movie)}>
           {movie.poster_path ? (
             <img
               src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
