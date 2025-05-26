@@ -13,17 +13,13 @@ import MovieModal from '../MovieModal/MovieModal';
 function App() {
 
   const [movies, setMovies] = useState<Movie[]>([]);
-  // const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [httpError, setHttpError] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
 
   const handleSearch = async (newTopic: string) => {
-    // if (!newTopic.trim()) {
-    //   toast.error('No movies found for your request.');
-    //   return;
-    // }
+
     setHttpError(false);
     setIsLoading(true);
     setMovies([]);
